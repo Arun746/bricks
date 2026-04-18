@@ -1,0 +1,12 @@
+name: make_feature
+description: Create a new feature module with widget, providers, repositories, and models folders
+version: 0.1.0
+
+environment:
+  mason: ">=0.1.0"
+
+vars:
+  feature_name:
+    type: string
+    description: Feature name
+    prompt: What is the feature name?

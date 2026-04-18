@@ -1,0 +1,13 @@
+name: init_project
+description: Initialize project with core folder structure, assets, and pubspec.yaml
+version: 0.1.0
+
+environment:
+  mason: ">=0.1.0"
+
+vars:
+  project_name:
+    type: string
+    description: Project name (package name)
+    default: my_project
+    prompt: What is your project name?

@@ -1,0 +1,5 @@
+bricks:
+  init_project:
+    path: bricks/init_project
+  make_feature:
+    path: bricks/make_feature

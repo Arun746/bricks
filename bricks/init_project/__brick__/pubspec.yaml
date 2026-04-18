@@ -1,0 +1,79 @@
+name: {{project_name}}
+description: A new Flutter project
+publish_to: "none"
+version: 1.0.0
+
+environment:
+  sdk: ">=3.0.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: any
+  pretty_dio_logger: any
+  connectivity_plus: any
+  package_info_plus: any
+  device_info_plus: any
+  email_validator: any
+  flutter_secure_storage: any
+  go_router: any
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_riverpod: ^2.6.1
+  freezed_annotation: ^2.2.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.4
+  riverpod_annotation: ^2.6.1
+  pinput: ^5.0.0
+  file_picker: ^10.3.3
+  video_thumbnail_plus: ^0.0.2
+  dotted_border: ^2.1.0
+  flutter_svg: ^2.2.0
+  android_id: ^0.4.0
+  google_maps_flutter: ^2.12.3
+  geolocator: ^13.0.1
+  geocoding: ^3.0.0
+  permission_handler: ^11.3.1
+  firebase_core: any
+  firebase_auth: any
+  firebase_messaging: any
+  google_sign_in: any
+  sign_in_with_apple: any
+  flutter_local_notifications: ^18.0.1
+  flutter_hooks: ^0.21.3+1
+  hooks_riverpod: ^2.6.1
+  drift: ^2.14.0
+  drift_flutter: ^0.2.7
+  path_provider: ^2.1.5
+  record: ^6.0.0
+  audioplayers: ^6.1.0
+
+dev_dependencies:
+  flutter_lints: any
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.6
+  drift_dev: ^2.14.0
+  freezed: ^2.4.0
+  json_annotation: ^4.9.0
+  json_serializable: ^6.9.0
+  riverpod_generator: any
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/icons/snackbar/
+    - assets/images/
+  fonts:
+    - family: AlbertSans
+      fonts:
+        - asset: assets/fonts/AlbertSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/AlbertSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/AlbertSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/AlbertSans-Bold.ttf
+          weight: 700

@@ -22,7 +22,7 @@ Creates a new feature module with:
 
 ## How to Use
 
-### Option 1: Use from GitHub (Recommended after publishing)
+### Option 1: Use from GitHub 
 
 Add bricks from GitHub in your project's `mason.yaml`:
 
@@ -30,11 +30,11 @@ Add bricks from GitHub in your project's `mason.yaml`:
 bricks:
   init_project:
     git:
-      url: https://github.com/YOUR_USERNAME/my_bricks.git
+      url: https://github.com/github_USERNAME/my_bricks.git
       path: bricks/init_project
   make_feature:
     git:
-      url: https://github.com/YOUR_USERNAME/my_bricks.git
+      url: https://github.com/github_USERNAME/my_bricks.git
       path: bricks/make_feature
 ```
 
@@ -49,8 +49,8 @@ If working on bricks locally, add path to local bricks:
 
 ```bash
 cd your_flutter_project
-mason add init_project --path /Users/arun/Desktop/Xcenter/my_bricks/bricks/init_project
-mason add make_feature --path /Users/arun/Desktop/Xcenter/my_bricks/bricks/make_feature
+mason add init_project --path /Users/...../bricks/init_project
+mason add make_feature --path /Users/..../bricks/make_feature
 ```
 
 ---

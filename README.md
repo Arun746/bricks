@@ -4,14 +4,14 @@ Custom Mason bricks for Flutter projects.
 
 ## bricks
 
-### init_project
+### directories
 Initializes a new Flutter project with:
 - Full `lib/core/` folder structure with all utilities, services, widgets, etc.
 - Empty `lib/features/` folder
 - Assets folders (images, icons, fonts)
 - pubspec.yaml with all required dependencies
 
-### make_feature
+### feature
 Creates a new feature module with:
 - `lib/features/{feature_name}/widget/`
 - `lib/features/{feature_name}/providers/`
@@ -28,14 +28,14 @@ Add bricks from GitHub in your project's `mason.yaml`:
 
 ```yaml
 bricks:
-  init_project:
+  directories:
     git:
       url: https://github.com/github_USERNAME/my_bricks.git
-      path: bricks/init_project
-  make_feature:
+      path: bricks/directories
+  feature:
     git:
       url: https://github.com/github_USERNAME/my_bricks.git
-      path: bricks/make_feature
+      path: bricks/feature
 ```
 
 Then run:
@@ -49,8 +49,8 @@ If working on bricks locally, add path to local bricks:
 
 ```bash
 cd your_flutter_project
-mason add init_project --path /Users/...../bricks/init_project
-mason add make_feature --path /Users/..../bricks/make_feature
+mason add directories --path /Users/...../bricks/directories
+mason add feature --path /Users/..../bricks/feature
 ```
 
 ---
@@ -67,11 +67,11 @@ cd my_tv_app
 # 2. Initialize mason
 mason init
 
-# 3. Add and run init_project brick
-mason add init_project --path /path/to/my_bricks/bricks/init_project
+# 3. Add and run directories brick
+mason add directories --path /path/to/my_bricks/bricks/directories
 # OR after adding to mason.yaml with git:
 mason get
-mason make init_project
+mason make directories
 # Enter project name when prompted (e.g., my_tv_app)
 
 # 4. Follow printed instructions:
@@ -82,8 +82,8 @@ dart run build_runner build -d
 ### Add a New Feature
 
 ```bash
-# After init_project is set up
-mason make make_feature
+# After directories is set up
+mason make feature
 # Enter feature name when prompted (e.g., settings, profile, home)
 ```
 
@@ -121,6 +121,6 @@ my_tv_app/
 
 ## Notes
 
-- Run `flutter pub get` after generating with `init_project`
+- Run `flutter pub get` after generating with `directories`
 - Run `dart run build_runner build -d` to generate freezed/riverpod code
 - After first use with git URL, just run `mason get` to update bricks

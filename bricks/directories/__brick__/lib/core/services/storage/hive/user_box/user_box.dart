@@ -1,11 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'user_box.g.dart';
-part 'user_box.freezed.dart';
 
 class UserBox {
   static const boxKey = 'user';
@@ -70,13 +69,28 @@ class UserBox {
   }
 }
 
-@Freezed()
-class UserBoxProperties with _$UserBoxProperties {
-  factory UserBoxProperties({
-    required String? username,
-    required String? id,
-  }) = _UserBoxProperties;
+@JsonSerializable()
+class UserBoxProperties {
+  UserBoxProperties({
+    required this.username,
+    required this.id,
+  });
 
   factory UserBoxProperties.fromJson(Map<String, dynamic> json) =>
       _$UserBoxPropertiesFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserBoxPropertiesToJson(this);
+
+  final String? username;
+  final String id;
+
+  UserBoxProperties copyWith({
+    String? username,
+    String? id,
+  }) {
+    return UserBoxProperties(
+      username: username ?? this.username,
+      id: id ?? this.id,
+    );
+  }
 }

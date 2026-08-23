@@ -2,6 +2,11 @@ import 'dart:async';
 
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'package:{{project_name}}/core/services/notification/notification_settings_box.dart';
+import 'package:{{project_name}}/core/services/storage/hive/app_box/app_box.dart';
+import 'package:{{project_name}}/core/services/storage/hive/auth_box/auth_box.dart';
+import 'package:{{project_name}}/core/services/storage/hive/user_box/user_box.dart';
+
 
 class StorageService {
   static Future<void> init() async {

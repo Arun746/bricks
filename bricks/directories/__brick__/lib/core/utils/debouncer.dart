@@ -13,6 +13,8 @@
 /// // Call this in your onChanged or similar callback
 /// debouncer.run(() => print('Action triggered!'));
 /// ```
+library;
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';

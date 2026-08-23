@@ -9,7 +9,7 @@ class RoutePath {
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 GoRouterState? _currentGoRouterState;
 void setCurrentGoRouterState(GoRouterState state, BuildContext context) {
-  final currentRoute = GoRouter.of(context).location;
+  final currentRoute = state.matchedLocation;
   if (currentRoute == state.fullPath) {
     _currentGoRouterState = state;
   }
@@ -24,11 +24,23 @@ class Routing {
         path: RoutePath.initial,
         name: RoutePath.initial,
         builder: (context, state) {
-
-          return MyHomePage();
+          return const PlaceholderPage();
         },
       ),
-     
+
     ],
   );
+}
+
+class PlaceholderPage extends StatelessWidget {
+  const PlaceholderPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text('Home'),
+      ),
+    );
+  }
 }

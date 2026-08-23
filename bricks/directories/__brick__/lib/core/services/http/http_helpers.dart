@@ -2,8 +2,8 @@
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 
-import '../storage/hive/auth_box/auth_box.dart';
-import '../../exceptions/network_exception.dart';
+import 'package:{{project_name}}/core/exceptions/network_exception.dart';
+import 'package:{{project_name}}/core/services/storage/hive/auth_box/auth_box.dart';
 
 
 class HttpHelpers {

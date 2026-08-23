@@ -1,4 +1,4 @@
-import 'urls.dart';
+import 'package:{{project_name}}/core/configs/urls.dart';
 
 enum ConfigEnums { production, development, staging }
 

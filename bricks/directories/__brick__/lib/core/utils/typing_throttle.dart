@@ -15,6 +15,8 @@
 /// // Call this in your onChanged or similar callback
 /// throttle.call();
 /// ```
+library;
+
 import 'dart:async';
 
 /// Throttles function calls to ensure [onTriggered] is not called more than once per [interval].

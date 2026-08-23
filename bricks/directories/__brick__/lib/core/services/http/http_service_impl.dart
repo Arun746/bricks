@@ -3,6 +3,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
+import 'package:{{project_name}}/core/services/http/http_service.dart';
+import 'package:{{project_name}}/core/services/http/interceptor/session_interceptor.dart';
+
 
 final httpServiceProvider = Provider<HttpService>((ref) {
   return HttpServiceImpl();

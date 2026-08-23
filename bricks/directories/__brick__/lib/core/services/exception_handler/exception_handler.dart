@@ -3,8 +3,8 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
-import '../../configs/configs.dart';
-import 'google_workspace.dart';
+import 'package:{{project_name}}/core/configs/configs.dart';
+import 'package:{{project_name}}/core/services/exception_handler/google_workspace.dart';
 
 
 class ExceptionHandler {

@@ -8,12 +8,18 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:video_thumbnail_plus/video_thumbnail_plus.dart';
 
 
-import '../exceptions/exception_message.dart';
-import '../widgets/custom_snackbar.dart';
+import 'package:{{project_name}}/core/enums/enums.dart';
+import 'package:{{project_name}}/core/exceptions/api_exception.dart';
+import 'package:{{project_name}}/core/exceptions/exception_message.dart';
+import 'package:{{project_name}}/core/exceptions/general_exception.dart';
+import 'package:{{project_name}}/core/exceptions/network_exception.dart';
+import 'package:{{project_name}}/core/services/routing/routing.dart';
+import 'package:{{project_name}}/core/utils/constants.dart';
+import 'package:{{project_name}}/core/widgets/custom_snackbar.dart';
+import 'package:{{project_name}}/core/widgets/scaffold_body/scaffold_body_provider.dart';
 
 // Global variable to track current sidebar snackbar overlay entry
 OverlayEntry? _currentSidebarSnackbar;

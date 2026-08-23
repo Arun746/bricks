@@ -5,9 +5,9 @@ import 'package:dio/dio.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
-import '../../configs/configs.dart';
-import '../../exceptions/api_exception.dart';
-import '../../utils/extensions/date_extensions.dart';
+import 'package:{{project_name}}/core/configs/configs.dart';
+import 'package:{{project_name}}/core/exceptions/api_exception.dart';
+import 'package:{{project_name}}/core/utils/extensions/date_extensions.dart';
 
 class GoogleWorkspace {
   static void logAll(

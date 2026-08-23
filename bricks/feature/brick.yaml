@@ -1,6 +1,6 @@
 name: feature
 description: Create a new feature module with widget, providers, repositories, and models folders
-version: 0.1.0
+version: 0.2.0
 
 environment:
   mason: ">=0.1.0"

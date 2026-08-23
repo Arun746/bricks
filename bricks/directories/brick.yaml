@@ -1,6 +1,6 @@
 name: directories
-description: Initialize project with core folder structure, assets, and pubspec.yaml
-version: 0.1.0
+description: Initialize project with core folder structure, assets, and latest dependencies
+version: 0.2.0
 
 environment:
   mason: ">=0.1.0"

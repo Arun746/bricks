@@ -1,0 +1,5 @@
+.DS_Store
+
+# Mason hook build artifacts
+bricks/*/hooks/.dart_tool/
+bricks/*/hooks/build/

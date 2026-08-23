@@ -5,9 +5,9 @@ import 'package:flutter/material.dart' show Color;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-import '../../enums/enums.dart';
-import '../storage/hive/app_box/app_box.dart';
-import 'notification_settings_box.dart';
+import 'package:{{project_name}}/core/enums/enums.dart';
+import 'package:{{project_name}}/core/services/notification/notification_settings_box.dart';
+import 'package:{{project_name}}/core/services/storage/hive/app_box/app_box.dart';
 
 class NotificationService {
   static final NotificationService _instance = NotificationService._internal();
@@ -56,7 +56,7 @@ class NotificationService {
     );
 
     await _localNotifications.initialize(
-      settings,
+      settings: settings,
       onDidReceiveNotificationResponse: _handleNotificationTapped,
     );
 
@@ -264,11 +264,11 @@ class NotificationService {
 
     final id = DateTime.now().millisecondsSinceEpoch ~/ 1000;
 
-    await _localNotifications.show(
-      id,
-      title,
-      body,
-      details,
+        await _localNotifications.show(
+      id: id,
+      title: title,
+      body: body,
+      notificationDetails: details,
       payload: jsonEncode(data),
     );
   }
@@ -358,6 +358,6 @@ class NotificationService {
   }
 
   Future<void> cancelNotification(int id) async {
-    await _localNotifications.cancel(id);
+    await _localNotifications.cancel(id: id);
   }
 }

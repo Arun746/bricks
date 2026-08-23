@@ -8,8 +8,8 @@ part 'scaffold_body_provider.freezed.dart';
 part 'scaffold_body_provider.g.dart';
 
 @freezed
-class ScaffoldBodyState with _$ScaffoldBodyState {
-  factory ScaffoldBodyState({
+sealed class ScaffoldBodyState with _$ScaffoldBodyState {
+  const factory ScaffoldBodyState({
     required Widget loading,
     required bool isLoading,
     required bool disableInteraction,

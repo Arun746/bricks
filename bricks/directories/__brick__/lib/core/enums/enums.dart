@@ -2,6 +2,7 @@
 
 enum SnackbarType { success, error, info }
 
+enum AuthenticationContext { app, webSidebar }
 
 enum NotificationType {
   registration,

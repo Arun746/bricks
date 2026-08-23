@@ -3,9 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../enums/enums.dart';
-import '../../utils/functions.dart';
-import 'scaffold_body_provider.dart';
+import 'package:{{project_name}}/core/enums/enums.dart';
+import 'package:{{project_name}}/core/utils/functions.dart';
+import 'package:{{project_name}}/core/widgets/scaffold_body/scaffold_body_provider.dart';
 
 class ScaffoldBody extends ConsumerStatefulWidget {
   final Widget child;

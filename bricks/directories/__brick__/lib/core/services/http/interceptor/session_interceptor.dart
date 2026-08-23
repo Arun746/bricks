@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 
-import '../../routing/routing.dart';
+import 'package:{{project_name}}/core/services/routing/routing.dart';
 
 const sessionExpireMessage = 'Session expired';
 
